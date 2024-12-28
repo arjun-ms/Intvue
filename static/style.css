@@ -1,0 +1,113 @@
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+.chat-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.chat-header {
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #1a1a1a;
+}
+
+.chat-messages {
+    padding: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-content {
+    padding: 12px 16px;
+    border-radius: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.message.user {
+    align-items: flex-end;
+}
+
+.message.assistant {
+    align-items: flex-start;
+}
+
+.message.user .message-content {
+    background-color: #0084ff;
+    color: white;
+}
+
+.message.assistant .message-content {
+    background-color: #e9ecef;
+    color: black;
+}
+
+.message-role {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.chat-input {
+    padding: 20px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.record-btn {
+    padding: 12px 24px;
+    background-color: #0084ff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.record-btn:hover {
+    background-color: #0069d9;
+}
+
+.recording-status {
+    margin-left: 10px;
+    color: #dc3545;
+}
+
+.clear-btn {
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.clear-btn:hover {
+    background-color: #c82333;
+}
