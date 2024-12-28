@@ -157,14 +157,16 @@ def get_chat_response(user_message):
         messages=messages,
     )
     # !
-    print()
-    print("GPT Response: ", gpt_response)
-    print()
+    # print()
+    # print("GPT Response: ", gpt_response)
+    # print()
     # parsed_gpt_response = gpt_response['choices'][0]['message']['content']
     parsed_gpt_response = gpt_response.choices[0].message.content
     print("++++++++++++++")
     print(f"Response from Qwen: {parsed_gpt_response}")
     print("++++++++++++++")
+
+    text_to_speech(parsed_gpt_response)
 
     # Save messages
     save_messages(user_message['text'], parsed_gpt_response)
